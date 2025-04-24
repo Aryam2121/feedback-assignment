@@ -1,10 +1,12 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-export async function handler(event) {
+async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
+  
+  module.exports = { handler };
 
   const data = JSON.parse(event.body);
   if (!data.name || !data.email || !data.message) {
