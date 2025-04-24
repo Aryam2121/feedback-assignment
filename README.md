@@ -1,12 +1,59 @@
-# React + Vite
+# Feedback Collector 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and elegant micro-application that allows users to submit feedback and enables admins to view submitted entries in a clean interface.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 [Live on Netlify](https://feedback-assignment.netlify.app/)  
+📂 [GitHub Repository](https://github.com/Aryam2121/feedback-assignment)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack
+
+- **Frontend**: React (with Vite or Next.js)
+- **Styling**: Tailwind CSS
+- **Backend**: Netlify Functions (Serverless API)
+- **Hosting**: Netlify
+
+---
+
+## 📦 Features
+
+### 🖊️ Feedback Form
+- Full Name (Text Input)
+- Email (with validation)
+- Feedback message (Textarea)
+- Submit button with loading state
+- Form-level validation with user-friendly messages
+
+### 🔐 Admin View
+- Toggle button: **"View Submitted Feedback"**
+- Displays feedback entries in a clean, card-style layout
+- Timestamps for each submission
+
+### 💅 UI & UX
+- Fully responsive
+- Clean and minimalistic design
+- Footer watermark with your name and submission info
+- Optional: Dark/Light theme toggle
+- Smooth transitions and animations
+
+---
+
+## 📁 Folder Structure
+
+```bash
+feedback-collector/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.jsx
+│   └── main.jsx
+├── netlify/functions/
+│   ├── submit-feedback.js
+│   └── get-feedbacks.js
+├── tailwind.config.js
+├── package.json
+└── README.md
