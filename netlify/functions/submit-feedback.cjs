@@ -5,8 +5,6 @@ async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-  
-  module.exports = { handler };
 
   const data = JSON.parse(event.body);
   if (!data.name || !data.email || !data.message) {
@@ -33,3 +31,6 @@ async function handler(event) {
     body: JSON.stringify({ message: 'Feedback submitted successfully' }),
   };
 }
+
+// Export the handler function here
+module.exports = { handler };
