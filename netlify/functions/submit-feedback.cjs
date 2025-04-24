@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-exports.handler = async (event) => {
+export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -30,4 +30,4 @@ exports.handler = async (event) => {
     statusCode: 200,
     body: JSON.stringify({ message: 'Feedback submitted successfully' }),
   };
-};
+}
